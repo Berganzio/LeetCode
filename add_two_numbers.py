@@ -46,15 +46,28 @@ class Solution:
         l2 = reverse_linked_list(l2)
         return reverse_linked_list(Solution().addTwoNumbers(l1, l2))
 
+    # function to actually see the linked list
+    def print_linked_list(self, head):
+        while head:
+            print(head.val, end=" ")
+            head = head.next
+        print()
+
 
 # test
-l1 = ListNode(2)
-l1.next = ListNode(4)
-l1.next.next = ListNode(3)
+l1 = ListNode(7)
+l1.next = ListNode(2)
+l1.next.next = ListNode(4)
+l1.next.next.next = ListNode(3)
 
 l2 = ListNode(5)
 l2.next = ListNode(6)
 l2.next.next = ListNode(4)
 
 sol = Solution()
+
 result = sol.addTwoNumbers(l1, l2)
+sol.print_linked_list(result)
+
+result = sol.addTwoNumbersII(l1, l2)
+sol.print_linked_list(result)
