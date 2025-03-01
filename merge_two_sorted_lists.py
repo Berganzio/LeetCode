@@ -28,9 +28,11 @@ class Solution:
             current = current.next
         # if there are remaining nodes in list1
         if list1:
+            # assign the remaining nodes of list1 to the current
             current.next = list1
         # if there are remaining nodes in list2
         if list2:
+            # assign the remaining nodes of list2 to the current
             current.next = list2
         # return the next node of the head node
         return head.next

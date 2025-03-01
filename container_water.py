@@ -1,9 +1,5 @@
-class Solution(object):
-    def maxArea(self, height):
-        """
-        :type height: List[int]
-        :rtype: int
-        """
+class Solution:
+    def maxArea(self, height: list[int]) -> int:
         area = 0
         left = 0
         right = len(height) - 1
@@ -17,5 +13,6 @@ class Solution(object):
 
 
 # test
+sol = Solution()
 height = [1, 8, 6, 2, 5, 4, 8, 3, 7]
-print(Solution().maxArea(height))  # 49
+print(sol.maxArea(height))  # 49

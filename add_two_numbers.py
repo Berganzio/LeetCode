@@ -8,6 +8,7 @@ class ListNode:
 
 
 class Solution:
+    # this function return the sum of two linked lists in reverse order
     def addTwoNumbers(
         self, l1: Optional[ListNode], l2: Optional[ListNode]
     ) -> Optional[ListNode]:
@@ -26,6 +27,24 @@ class Solution:
             if l2:
                 l2 = l2.next
         return dummy.next
+
+    # this function return the sum of two linked lists in forward order
+    def addTwoNumbersII(
+        self, l1: Optional[ListNode], l2: Optional[ListNode]
+    ) -> Optional[ListNode]:
+        # reverse the linked list
+        def reverse_linked_list(head):
+            prev = None
+            while head:
+                temp = head.next
+                head.next = prev
+                prev = head
+                head = temp
+            return prev
+
+        l1 = reverse_linked_list(l1)
+        l2 = reverse_linked_list(l2)
+        return reverse_linked_list(Solution().addTwoNumbers(l1, l2))
 
 
 # test
