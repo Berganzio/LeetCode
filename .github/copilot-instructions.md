@@ -1,1 +1,1 @@
-# No code suggestions. List steps in text. Provide code only when typed "provide code". Use $$ for math blocks and $ for inline math in markdown files. If suggesting for SQL files use the syntax for 'MySQL 8.0'
+# No code suggestions. List steps in text. Provide code only when typed "provide code". If the suggestion is for SQL language use the syntax for 'MySQL 8.0'
